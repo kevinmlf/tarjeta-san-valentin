@@ -1,0 +1,136 @@
+:root {
+    color-scheme: dark;
+}
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(0) scale(0.5);
+        -webkit-transform: translateY(0) scale(0.5);
+        /* Safari */
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        -webkit-transform: translateY(-100vh) scale(1);
+        /* Safari */
+        opacity: 0;
+    }
+}
+
+.body {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    min-height: 100dvh;
+    margin: 0;
+    font-family: "Italianno", serif;
+    overflow: hidden;
+    background-image: linear-gradient(to top, crimson, pink);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Mejora el desplazamiento en iOS */
+}
+
+.card {
+    max-width: 768px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+    font-size: 1.6rem;
+}
+
+.button {
+    background-color: white;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background: #e60073;
+    transform: scale(1.1);
+}
+
+.flexbox {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bubbleUp {
+    font-size: 2rem;
+    animation: bubbleUp 8s infinite;
+    position: absolute;
+    will-change: transform, opacity;
+
+    transform: translateY(-100vh) scale(1);
+    /* Propiedad estándar primero */
+    -webkit-transform: translateY(-100vh) scale(1);
+    /* Prefijo para Safari después */
+}
+
+.bubbleUp:nth-child(1) {
+    left: 10%;
+    animation-delay: -6s;
+}
+
+.bubbleUp:nth-child(2) {
+    left: 30%;
+    animation-delay: -5s;
+}
+
+.bubbleUp:nth-child(3) {
+    left: 50%;
+    animation-delay: -7s;
+}
+
+.bubbleUp:nth-child(4) {
+    left: 70%;
+    animation-delay: -4s;
+}
+
+.bubbleUp:nth-child(5) {
+    left: 90%;
+    animation-delay: -8s;
+}
+
+.bubbleUp:nth-child(6) {
+    left: 20%;
+    animation-delay: -9s;
+}
+
+.bubbleUp:nth-child(7) {
+    left: 60%;
+    animation-delay: -10s;
+}
+
+.bubbleUp:nth-child(8) {
+    left: 80%;
+    animation-delay: -11s;
+}
